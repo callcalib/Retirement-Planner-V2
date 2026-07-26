@@ -1,77 +1,110 @@
 COUNTRIES = {
 
-"Batumi":{
+    # 🇬🇪 Georgia
+    "Batumi": {
 
-    "house_price":170000,
+        "country": "Georgia",
+        "currency": "GEL",
 
-    "property_tax":150,
+        "house_price": 170000,
 
-     "healthcare":100,
+        "property_tax": 150,
+        "healthcare": 100,
 
-    "pension_tax":0,
+        "pension_tax": 0,
+        "foreign_interest_tax": 0,
+        "local_interest_tax": 0.05,
+        "irish_rental_tax": 0,
 
-    "foreign_interest_tax":0,
+        "prices": {
+            "bread": 0.85,
+            "milk": 1.45,
+            "rice": 1.60,
+            "chicken": 4.20,
+            "beef": 8.90,
+            "eggs": 2.20,
 
-    "local_interest_tax":0.05,
+            "electricity": 0.10,
+            "petrol": 1.06,
 
-    "irish_rental_tax":0,
+            "internet": 12,
+            "mobile": 6,
 
-    "bread":0.85,
+            "restaurant_meal": 8,
+            "coffee_1kg": 2.50
+        }
+    },
 
-    "milk":1.45,
 
-    "rice":1.60,
+    # 🇦🇱 Albania
+    "Albania": {
 
-    "chicken":4.20,
+        # add Albania data here
 
-    "beef":8.90,
+    },
 
-    "eggs":2.20,
 
-    "electricity":0.10,
+    # 🇧🇬 Bulgaria
+    "Varna": {
 
-    "petrol":1.06,
+        # add Varna / Bulgaria data here
 
-    "internet":12,
+    },
 
-    "mobile":6,
 
-    "restaurant_meal":8,
+    # 🇵🇭 Philippines
+    "Baguio": {
 
-    "coffee_1kg":2.5
+        # add Baguio data here
 
-},
+    },
 
-"Albania":{
 
-...
+    # 🇲🇰 North Macedonia
+    "North Macedonia — Ohrid": {
 
-},
+        # add Ohrid data here
 
-"Varna":{
+    },
 
-"Baguio":{
 
-...
+    # 🇨🇾 Cyprus
+    "Cyprus Mountain": {
 
-},
+        # add Cyprus data here
 
-"North Macedonia — Ohrid":{
+    },
 
-...
+
+    # 🇲🇾 Malaysia
+    "Malaysia": {
+
+        # add Malaysia data here
+
+    },
+
+
+    # 🇹🇭 Thailand
+    "Thailand": {
+
+        # add Thailand data here
+
+    },
+
+
+    # 🇪🇸 Spain
+    "Spain": {
+
+        # add Spain data here
+
+    },
+
+
+    # 🇬🇧 UK comparison
+    "UK": {
+
+        # add UK comparison data here
+
+    }
 
 }
-
-}
-
-country = {
-# 🇬🇪 Georgia — Batumi/Kobuleti
-#🇵🇭 Philippines — Baguio
-#🇧🇬 Bulgaria — Sandanski
-#🇲🇰 North Macedonia — Ohrid
-#🇦🇱 Albania
-#🇨🇾 Cyprus mountain
-#🇲🇾 Malaysia
-#🇹🇭 Thailand
-#🇪🇸 Spain
-#🇬🇧 UK comparison
