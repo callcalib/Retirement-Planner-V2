@@ -10,9 +10,9 @@ COUNTRIES = {
 
     "pension_tax":0,
 
-    "foriegn_interest_tax":0,
+    "foreign_interest_tax":0,
 
-    "local_interest_tax":5%,
+    "local_interest_tax":0.05,
 
     "irish_rental_tax":0,
 
@@ -38,7 +38,7 @@ COUNTRIES = {
 
     "restaurant_meal":8,
 
-    "coffee 1KG":2.5
+    "coffee_1kg":2.5
 
 },
 
