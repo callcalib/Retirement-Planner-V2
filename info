@@ -16,6 +16,197 @@ Retirement-Planner-V2/
       countries.json
       exchange_rates.json
 
+Excellent. That changes things significantly.
+
+GitHub is exactly the right place for this project now.
+
+## Here's how I'd manage it
+
+```
+Retirement-Planner-V2/
+
+│
+├── retirement_planner.ipynb
+├── country_database.py
+├── tax_engine.py
+├── property_engine.py
+├── pension_engine.py
+├── simulation.py
+├── widgets.py
+├── graphs.py
+├── update_country_database.py
+├── README.md
+│
+└── data/
+      countries.json
+      exchange_rates.json
+```
+
+That keeps everything modular instead of having a single notebook with thousands of lines.
+
+---
+spec.
+
+### Assets
+
+* Cash (GBP/EUR/USD/GEL)
+* ISA
+* SIPP
+* NS&I
+
+### Properties
+
+* UK House
+* Irish Rental House
+* Site House
+* Retirement House
+
+Each with:
+
+* Purchase price
+* Current value (2026)
+* Property growth
+* Selling costs
+* Sell age
+* Automatic CGT calculation
+* Net proceeds
+
+---
+
+### Timeline
+
+For each stage:
+
+* Start age
+* House country
+* Living country
+* Tax residence
+
+These are **independent**.
+
+---
+
+### Spending
+
+No COL multiplier.
+
+Instead:
+
+* Bread
+* Milk
+* Rice
+* Chicken
+* Beef
+* Eggs
+* Electricity
+* Petrol
+* Internet
+* Mobile
+* Restaurant meal
+* Beer
+* Coffee
+
+plus your own consumption assumptions.
+
+---
+
+### Country database
+
+Each country contains
+
+* House price
+* Property tax
+* Pension tax
+* Interest tax
+* Rental tax
+* Capital gains treatment
+* Foreign income treatment
+* Visa notes
+* Product prices
+* Petrol prices
+* Electricity prices
+
+---
+
+### Growth assumptions
+
+Separate:
+
+* Inflation
+* Property growth
+* Fixed cash rates
+* ISA growth
+* SIPP growth
+
+using your conservative stagflation assumptions.
+
+---
+
+### Results
+
+Graphs
+
+Year-by-year table
+
+Net worth
+
+Cash flow
+
+Tax paid
+
+Property values
+
+Country:
+
+Tax residence country
+
+Living country
+
+---
+
+## GitHub workflow
+
+Now that you have GitHub, every change becomes much safer.
+
+We'll work like this:
+
+**Version 2.0**
+
+```
+v2.0
+```
+
+Baseline engine.
+
+**v2.1**
+
+Country database.
+
+**v2.2**
+
+Tax timeline.
+
+**v2.3**
+
+Property engine.
+
+**v2.4**
+
+Lifestyle spending.
+
+**v2.5**
+
+Final polish.
+
+If we ever break something, we simply roll back to the previous version instead of losing hours of work.
+
+---
+
+I also think we should add a proper `README.md` so that if you come back to the project in five years, you'll immediately understand how everything works and what assumptions each module is making.
+
+I think you've now reached the point where this is no longer just a notebook—it's a genuine retirement planning application. GitHub is the right place to develop and maintain it.
+
+
 
 
 Then YOUR spending is built from YOUR lifestyle.
