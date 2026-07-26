@@ -1,0 +1,29 @@
+MY_LIFESTYLE = {
+
+    "bread_per_week":2,
+
+    "milk_per_week":2,
+
+    "rice_kg_month":2,
+
+    "chicken_kg_month":3,
+
+    "beef_kg_month":2,
+
+    "eggs_dozen_month":4,
+
+    "electricity_kwh_year":3200,
+
+    "petrol_litres_year":700,
+
+    "internet":1,
+
+    "mobile":1,
+
+    "restaurant_meals_month":8,
+
+    "beer_month":20,
+
+    "coffee_month":20
+
+}
