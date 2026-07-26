@@ -1,22 +1,28 @@
 Retirement-Planner-V2/
-
 │
-├── retirement_planner.ipynb
-├── country_database.py
-├── tax_engine.py
-├── property_engine.py
-├── pension_engine.py
-├── simulation.py
-├── widgets.py
-├── graphs.py
-├── update_country_database.py
 ├── README.md
+├── LICENSE
+├── .gitignore
 │
-└── data/
-      countries.json
-      exchange_rates.json
+├── retirement_planner_v2.ipynb
+│
+├── data/
+│   ├── countries.json
+│   ├── product_prices.json
+│   ├── tax_rules.json
+│   ├── exchange_rates.json
+│   ├── house_prices.json
+│   └── visas.json
+│
+├── docs/
+│   ├── Design.md
+│   ├── Assumptions.md
+│   └── ChangeLog.md
+│
+├── versions/
+│
+└── backup/
 
-Excellent. That changes things significantly.
 
 GitHub is exactly the right place for this project now.
 
@@ -41,6 +47,165 @@ Retirement-Planner-V2/
       countries.json
       exchange_rates.json
 ```
+
+That looks excellent. 👍
+
+I'd make **just two small improvements** before we start adding code.
+
+## Final structure I'd use
+
+```
+Retirement-Planner-V2/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── retirement_planner_v2.ipynb
+│
+├── data/
+│   ├── countries.json
+│   ├── product_prices.json
+│   ├── tax_rules.json
+│   ├── exchange_rates.json
+│   ├── house_prices.json
+│   └── visas.json
+│
+├── docs/
+│   ├── Design.md
+│   ├── Assumptions.md
+│   └── ChangeLog.md
+│
+├── versions/
+│
+└── backup/
+```
+
+---
+
+## Why add these?
+
+### house_prices.json
+
+Rather than putting house prices inside countries.
+
+Example
+
+```json
+{
+  "Georgia":170000,
+  "Albania":140000,
+  "Bulgaria":160000
+}
+```
+
+Later we might even have
+
+```text
+Batumi
+Kobuleti
+Gonio
+Sandanski
+Ohrid
+```
+
+instead of just countries.
+
+---
+
+### visas.json
+
+Contains
+
+* Residency permit value
+* Visa costs
+* Minimum investment
+* Healthcare requirement
+
+Keeps visa data separate from tax data.
+
+---
+
+### Assumptions.md
+
+This will become one of the most useful files.
+
+For example
+
+```
+Cash assumptions
+
+GBP 4%
+
+USD 3%
+
+ISA 0%
+
+SIPP -1%
+
+Property Growth 3%
+
+Inflation 5%
+
+Fuel based on 6000 miles
+
+Electricity 3200kWh
+
+etc
+```
+
+So in 5 years' time you'll remember **why** the model produced the results it did.
+
+---
+
+### ChangeLog.md
+
+Every time we improve the planner:
+
+```
+V2.0
+
+Initial engine
+
+V2.1
+
+Country database
+
+V2.2
+
+Property tax
+
+V2.3
+
+Lifestyle spending
+```
+
+You'll always know what changed.
+
+---
+
+## The very first coding task tomorrow
+
+I think this should be:
+
+**Version 2.0**
+
+* Read all JSON files.
+* Load the country database.
+* Load tax rules.
+* Load product prices.
+* Display the selected country correctly.
+
+No calculations yet.
+
+If that works, everything else becomes much easier because the simulator can simply query the databases instead of having values scattered throughout the code.
+
+---
+
+I genuinely think this project is now becoming something quite substantial. If we keep it organised from the start, it'll be much easier to maintain and extend as your retirement plans evolve.
+
+
+
 
 That keeps everything modular instead of having a single notebook with thousands of lines.
 
