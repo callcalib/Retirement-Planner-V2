@@ -1,3 +1,6 @@
+# Personal retirement profile
+# Edit these values as your situation changes
+
 PERSONAL = {
 
     "retirement_age": 55,
@@ -15,8 +18,14 @@ PERSONAL = {
     },
 
     "income": {
-        "irish_rent": 10000,
+        "irish_rental": 10000,
         "state_pension_age": 67,
     },
+
+    "spending": {
+        "age_55_67": 35000,
+        "age_67_80": 30000,
+        "age_80_plus": 32000,
+    }
 
 }
