@@ -1,0 +1,55 @@
+COUNTRIES = {
+
+"Georgia":{
+
+    "house_price":170000,
+
+    "property_tax":150,
+
+    "pension_tax":0,
+
+    "interest_tax":0,
+
+    "rental_tax":5,
+
+    "bread":0.85,
+
+    "milk":1.45,
+
+    "rice":1.60,
+
+    "chicken":4.20,
+
+    "beef":8.90,
+
+    "eggs":2.20,
+
+    "electricity":0.10,
+
+    "petrol":1.06,
+
+    "internet":12,
+
+    "mobile":6,
+
+    "restaurant":8,
+
+    "beer":2,
+
+    "coffee":2.5
+
+},
+
+"Albania":{
+
+...
+
+},
+
+"Bulgaria":{
+
+...
+
+}
+
+}
