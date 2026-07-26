@@ -1,6 +1,6 @@
 COUNTRIES = {
 
-"Georgia":{
+"Batumi":{
 
     "house_price":170000,
 
@@ -48,7 +48,15 @@ COUNTRIES = {
 
 },
 
-"Bulgaria":{
+"Varna":{
+
+"Baguio":{
+
+...
+
+},
+
+"North Macedonia — Ohrid":{
 
 ...
 
@@ -57,3 +65,13 @@ COUNTRIES = {
 }
 
 country = {
+# 🇬🇪 Georgia — Batumi/Kobuleti
+#🇵🇭 Philippines — Baguio
+#🇧🇬 Bulgaria — Sandanski
+#🇲🇰 North Macedonia — Ohrid
+#🇦🇱 Albania
+#🇨🇾 Cyprus mountain
+#🇲🇾 Malaysia
+#🇹🇭 Thailand
+#🇪🇸 Spain
+#🇬🇧 UK comparison
