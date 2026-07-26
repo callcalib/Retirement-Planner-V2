@@ -6,11 +6,15 @@ COUNTRIES = {
 
     "property_tax":150,
 
+     "healthcare":100,
+
     "pension_tax":0,
 
-    "interest_tax":0,
+    "foriegn_interest_tax":0,
 
-    "rental_tax":5,
+    "local_interest_tax":5%,
+
+    "irish_rental_tax":0,
 
     "bread":0.85,
 
@@ -32,11 +36,9 @@ COUNTRIES = {
 
     "mobile":6,
 
-    "restaurant":8,
+    "restaurant_meal":8,
 
-    "beer":2,
-
-    "coffee":2.5
+    "coffee 1KG":2.5
 
 },
 
@@ -53,3 +55,5 @@ COUNTRIES = {
 }
 
 }
+
+country = {
