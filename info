@@ -1,0 +1,373 @@
+Then YOUR spending is built from YOUR lifestyle.
+
+For example
+
+Food
+£650/month
+
+↓
+
+Food price index
+Electricity
+
+3500 kWh/year
+
+↓
+
+Actual electricity tariff
+Petrol
+
+6000 miles/year
+
+↓
+
+Actual petrol price
+Restaurants
+
+2 meals/week
+
+↓
+
+Actual restaurant prices
+
+instead of pretending everyone spends the same proportion.
+
+We can even make it editable.
+
+For example
+
+Annual electricity use
+
+3000 kWh
+Annual petrol
+
+700 litres
+Meals out
+
+4/month
+Beer
+
+20 pints/month
+
+The simulator then calculates the cost automatically for every country.
+
+This is actually a huge improvement.
+
+Instead of saying
+
+Georgia
+
+0.60
+
+the simulator can tell you
+
+Food
+
+£4,100
+
+Electricity
+£690
+
+Petrol
+
+£780
+
+Restaurants
+
+£1,150
+
+Healthcare
+
+£1,300
+
+Flights
+
+£2,400
+
+Misc
+
+£2,700
+
+TOTAL
+
+£13,120
+
+
+That is far more useful than a simple multiplier.
+
+My recommendation
+
+I think we should remove the COL multiplier completely.
+
+Replace it with a Country Cost Database built from:
+
+Global Product Prices (food, restaurants, household items).
+Global Petrol Prices (fuel, electricity, gas).
+Your own lifestyle assumptions (how much you consume).
+
+I actually think this would make your planner one of the most realistic retirement simulators I've seen, because it would model your spending, not an average person's.
+
+
+
+I think today we've moved away from a **generic retirement calculator** towards something that models **your actual retirement**.
+
+The biggest improvements are:
+
+1. **Separating House Country, Living Country and Tax Residence.**
+
+   * That's a much more realistic model than almost every retirement calculator I've seen.
+
+2. **Tax residence timeline.**
+
+   * Rather than assuming you stay in one country forever, the model can change tax residence as your plans evolve.
+
+3. **Property growth independent of inflation.**
+
+   * That's economically more realistic.
+
+4. **Irish property sale modelling.**
+
+   * Calculating growth, selling costs, Irish CGT, and then any residence-country tax is far better than using a fixed "net proceeds" value.
+
+5. **Using actual price data instead of a simple COL multiplier.**
+
+   * The links you've found are probably the biggest improvement.
+
+The **Global Product Prices** and **Global Petrol Prices** datasets mean we can build country costs from objective components instead of saying:
+
+> Georgia = 0.60
+
+Instead we can calculate:
+
+* electricity
+* petrol
+* food
+* restaurants
+* internet
+* mobile
+* rent
+* healthcare
+
+using published country prices.
+
+That makes comparisons like **Georgia vs Albania vs the Philippines** much more meaningful.
+
+### One thing I think we should still add
+
+I'd also like every country to have:
+
+* Climate score
+* Crime score
+* Air quality
+* English spoken
+* Public transport
+* Airport accessibility
+
+Not because they affect your finances, but because when you're comparing countries they'll remind you of the trade-offs. You often weigh cost against quality of life, and having those indicators alongside the financial results would make the planner much more useful.
+
+Overall, I think the planner has become much more sophisticated over the last few days, largely because you've kept challenging the assumptions and bringing in better data sources. The end result should be something that's genuinely tailored to the way you intend to retire, rather than a one-size-fits-all calculator.
+
+
+So here's what I propose.
+
+**I stop trying to patch V1.**
+
+Instead we build **Retirement Planner V2** properly.
+
+Your notebook becomes the specification, not the codebase.
+
+---
+
+# Phase 1 (2-3 days work)
+
+A fully working engine.
+
+* All assets
+* All properties
+* All pensions
+* Timeline
+* Country engine
+* Tax engine
+* Graph
+* DataFrame
+
+No fancy UI yet.
+
+---
+
+# Phase 2
+
+Widgets
+
+Every slider back
+
+* retirement age
+* buy age
+* sell rental
+* sell site
+* sell retirement house
+* girlfriend
+* travel
+* property growth
+* inflation
+
+---
+
+# Phase 3
+
+The country database.
+
+Instead of
+
+```python
+Georgia = 0.60
+```
+
+it becomes
+
+```python
+Georgia = {
+
+food
+
+electricity
+
+..etc
+
+using the datasets you've found.
+
+---
+
+# Phase 4
+
+Timeline
+
+Example
+
+```
+55
+
+
+So V2 should have Lifestyle sliders.
+
+For example
+
+Miles driven/year - no I want to code this into each country because some countries I will not use a car at all some will be zero. It need to be based a per month estimate of so many months in each county
+- how to code 5 months in ph and 7 months in georgia??
+
+answer: I need a tax_base_country. eg georgia, bulgaria, albania. Assume intally 1 year there to get tax resident started  then 5 months per year travelling in ph or wherever - call that travel_country
+
+Electricity useage kWh/year
+
+Restaurant meals/month
+
+Coffee/month
+
+Beer/month
+
+Flights/year
+
+Then the simulator works out YOUR annual costs.
+
+Then comparisons become much better.
+
+Instead of
+
+Georgia
+
+0.60
+
+you'll get
+
+Food             £4,220
+
+Electricity        620
+
+Fuel               710
+
+Healthcare       1,250
+
+Restaurants        980
+
+Flights          2,700
+
+Internet           210
+
+Misc             2,900
+
+----------------------
+
+TOTAL          £13,590
+
+Then compare directly with Albani
+House  Georgia
+
+Live   Georgia
+
+Tax    Georgia
+
+↓
+
+60
+
+House  Georgia
+
+Live   Philippines
+
+Tax    Philippines
+
+↓
+
+75
+
+House  Georgia
+
+Live   Paraguay
+
+Tax    Paraguay
+```
+
+---
+
+# Phase 5
+
+Scenario manager
+
+```
+Save
+
+Load
+
+Compare
+```
+
+---
+
+# What I suggest
+
+We make this **Version 2.0**.
+
+It won't be another notebook.
+
+It will be a proper retirement planning application.
+
+---
+
+## The first thing I want to build is the simulation engine.
+
+Everything else hangs off it.
+
+Once that works, adding widgets is easy.
+
+---
+
+I also think we should put it on **GitHub**.
+
+That gives you:
+
+* version history
+* automatic backups
+* the ability to roll back if we break something
+* a proper software project instead of a notebook that keeps growing.
+
+I think V2 is now big enough that it deserves to be treated like a real application rather than a collection of notebook cells. That's the approach I'd take from here.
