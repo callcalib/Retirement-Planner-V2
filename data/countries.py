@@ -1,64 +1,42 @@
 COUNTRIES = {
 
-    # ==========================================================
-    # 🇬🇪 Georgia
-    # ==========================================================
+    "UK": {
+        "country": "United Kingdom",
+        "currency": "GBP",
 
-    "Batumi": {
+        "house_price": 65000,
+        "property_tax": 0,
+
+        "cost_multiplier": 1.00,
+
+        "pension_tax": "UK",
+
+        "financial_score": 7,
+        "lifestyle_score": 7,
+        "travel_score": 10
+    },
+
+
+    "Georgia (Batumi)": {
 
         "country": "Georgia",
-        "city": "Batumi",
-        "display_currency": "GEL"
+        "currency": "GEL",
 
         "house_price": 170000,
-        "healthcare": 100,
 
-        "tax": {
-            "property": 150,
-            "pension": 0,
-            "foreign_interest": 0,
-            "local_interest": 0.05,
-            "irish_rental": 0
-        },
+        "property_tax": 150,
 
-        "prices": {
-            "bread": 0.85,
-            "milk": 1.45,
-            "rice": 1.60,
-            "chicken": 4.20,
-            "beef": 8.90,
-            "eggs": 2.20,
-            "electricity": 0.10,
-            "petrol": 1.06,
-            "internet": 12,
-            "mobile": 6,
-            "restaurant_meal": 8,
-            "coffee_1kg": 2.50
-        }
+        "cost_multiplier": 0.60,
 
+        "pension_tax": 0,
+
+        "financial_score": 9,
+        "lifestyle_score": 8,
+        "travel_score": 7
     },
 
-    # ==========================================================
-    # 🇦🇱 Albania
-    # ==========================================================
 
-    "Albania": {
-
-    },
-
-    # ==========================================================
-    # 🇧🇬 Bulgaria
-    # ==========================================================
-
-    "Varna": {
-
-    },
-
-    # ==========================================================
-    # 🇵🇭 Philippines
-    # ==========================================================
-
-    "Baguio": {
+    "Philippines (Baguio)": {
 
         "country": "Philippines",
         "currency": "PHP",
@@ -71,60 +49,85 @@ COUNTRIES = {
 
         "pension_tax": 0,
 
-        "climate_score": 10,
-        "crime_score": 7,
-        "english_score": 10,
-        "airport_score": 6
-    }
-
+        "financial_score": 9,
+        "lifestyle_score": 9,
+        "travel_score": 6
     },
 
-    # ==========================================================
-    # 🇲🇰 North Macedonia
-    # ==========================================================
-
-    "Ohrid": {
-
-    },
-
-    # ==========================================================
-    # 🇨🇾 Cyprus
-    # ==========================================================
-
-    "Cyprus Mountain": {
-
-    },
-
-    # ==========================================================
-    # 🇲🇾 Malaysia
-    # ==========================================================
 
     "Malaysia": {
 
+        "country": "Malaysia",
+        "currency": "MYR",
+
+        "house_price": 200000,
+
+        "property_tax": 500,
+
+        "cost_multiplier": 0.55,
+
+        "pension_tax": 0,
+
+        "financial_score": 8,
+        "lifestyle_score": 8,
+        "travel_score": 8
     },
 
-    # ==========================================================
-    # 🇹🇭 Thailand
-    # ==========================================================
 
-    "Thailand": {
+    "Cyprus (Mountain)": {
 
+        "country": "Cyprus",
+        "currency": "EUR",
+
+        "house_price": 180000,
+
+        "property_tax": 400,
+
+        "cost_multiplier": 0.85,
+
+        "pension_tax": "Cyprus",
+
+        "financial_score": 7,
+        "lifestyle_score": 8,
+        "travel_score": 9
     },
 
-    # ==========================================================
-    # 🇪🇸 Spain
-    # ==========================================================
 
-    "Spain": {
+    "Albania": {
 
+        "country": "Albania",
+        "currency": "ALL",
+
+        "house_price": 150000,
+
+        "property_tax": 300,
+
+        "cost_multiplier": 0.55,
+
+        "pension_tax": 0,
+
+        "financial_score": 9,
+        "lifestyle_score": 7,
+        "travel_score": 7
     },
 
-    # ==========================================================
-    # 🇬🇧 United Kingdom
-    # ==========================================================
 
-    "UK": {
+    "North Macedonia (Ohrid)": {
 
+        "country": "North Macedonia",
+        "currency": "MKD",
+
+        "house_price": 150000,
+
+        "property_tax": 200,
+
+        "cost_multiplier": 0.55,
+
+        "pension_tax": 0,
+
+        "financial_score": 9,
+        "lifestyle_score": 8,
+        "travel_score": 7
     }
 
 }
