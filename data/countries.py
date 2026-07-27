@@ -60,6 +60,23 @@ COUNTRIES = {
 
     "Baguio": {
 
+        "country": "Philippines",
+        "currency": "PHP",
+
+        "house_price": 120000,
+
+        "property_tax": 300,
+
+        "cost_multiplier": 0.45,
+
+        "pension_tax": 0,
+
+        "climate_score": 10,
+        "crime_score": 7,
+        "english_score": 10,
+        "airport_score": 6
+    }
+
     },
 
     # ==========================================================
