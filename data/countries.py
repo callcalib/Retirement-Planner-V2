@@ -8,7 +8,7 @@ COUNTRIES = {
 
         "country": "Georgia",
         "city": "Batumi",
-        "currency": "GEL",
+        "display_currency": "GEL"
 
         "house_price": 170000,
         "healthcare": 100,
